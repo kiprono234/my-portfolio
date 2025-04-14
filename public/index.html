@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Kiprono | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Header -->
+  <header class="bg-gray-900 text-white text-center py-10 px-6">
+    <h1 class="text-4xl font-bold">Hi, I'm Kevin Kiprono</h1>
+    <p class="text-lg mt-2">Full Stack Developer based in Nairobi, Kenya</p>
+    <nav class="mt-4 space-x-4">
+      <a href="#about" class="text-gray-300 hover:text-white">About</a>
+      <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+      <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+    </nav>
+  </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- About Section -->
+  <section id="about" class="py-12 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I love building full-stack web applications with Python, JavaScript, Django, and React.
+      I'm passionate about solving real-world problems using code.
+    </p>
+  </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 px-6 bg-white shadow-inner">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+
+      <!-- Project 1 -->
+      <div class="bg-gray-100 rounded-xl shadow p-6">
+        <h3 class="text-xl font-bold mb-2">Funds Donation Tracker</h3>
+        <p class="text-gray-700 mb-3">
+          A web app to connect donors with organizations in need. Built with Flask, SQLAlchemy, and React.
+        </p>
+        <p class="mb-2 text-sm text-gray-600"><strong>Technologies:</strong> Flask, SQLAlchemy, React</p>
+        <a href="https://github.com/kiprono234/phase-1-prpject-funds--donation-tracker.git" target="_blank"
+           class="text-indigo-600 hover:underline mr-4">View Code</a>
+        <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-100 rounded-xl shadow p-6">
+        <h3 class="text-xl font-bold mb-2">Moringa Cloud</h3>
+        <p class="text-gray-700 mb-3">
+          A cloud-based platform for Moringa students to manage their projects and portfolios. Built with Django, PostgreSQL, and React.
+        </p>
+        <p class="mb-2 text-sm text-gray-600"><strong>Technologies:</strong> Django, PostgreSQL, React</p>
+        <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+    <p class="mb-2">Phone: <span class="text-gray-700">+254703746719</span></p>
+    <p class="mb-2">Email: <a href="mailto:Kipronok234@gmail.com" class="text-indigo-600 hover:underline">Kipronok234@gmail.com</a></p>
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/kevin-kiprono-34b10521b" 
+         class="text-indigo-600 hover:underline" 
+         target="_blank">
+        My LinkedIn
+        <!-- <a href="/resume.pdf" download
+   class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 mt-4">
+  Download CV -->
+  <!-- <a href="/resume.pdf" download="Kevin_Kiprono_CV.pdf"
+   class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 mt-4">
+  Download CV -->
+  <a href="/cv.kevin.pdf" download="Kevin_Kiprono_CV.pdf"
+   class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 mt-4">
+  Download CV
+</a>
+
+</a>
+
+</a>
+
+      </a>
+    </p>
+  </section>
+  <!-- Netlify Form -->
+  <form name="contact" method="POST" data-netlify="true" class="bg-gray-100 p-6 rounded-xl shadow max-w-md">
+    <input type="hidden" name="form-name" value="contact" />
+    <div class="mb-4">
+      <label class="block mb-1 text-sm font-medium text-gray-700">Name</label>
+      <input type="text" name="name" required class="w-full px-3 py-2 border rounded-lg" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 text-sm font-medium text-gray-700">Email</label>
+      <input type="email" name="email" required class="w-full px-3 py-2 border rounded-lg" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 text-sm font-medium text-gray-700">Message</label>
+      <textarea name="message" required class="w-full px-3 py-2 border rounded-lg h-28"></textarea>
+    </div>
+    <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+      Send Message
+    </button>
+  </form>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6 border-t mt-8">
+    &copy; 2025 Kevin Kiprono. All rights reserved.
+  </footer>
+
+</body>
 </html>
